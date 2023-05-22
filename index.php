@@ -30,9 +30,7 @@ require_once __DIR__ . '/functions.php';
         <div class="mt-3 text-white">
 
         <?php
-
-            echo "<p> <span> PASSWORD </span> <strong> $password </strong> </p> </span>";
-
+            echo $password;
         ?>
 
         </div>

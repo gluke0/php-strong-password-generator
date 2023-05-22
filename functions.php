@@ -10,4 +10,8 @@ if (isset($_GET['length'])){
             }
           }
 
+        header ('Location: ./password.php');
+        session_start();
+        $_SESSION['password'] = $password;
+
 ?>
