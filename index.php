@@ -19,6 +19,7 @@
             <label class="text-uppercase text-white"> choose the length of your password: </label>
             <input type="text" name="length" class="form-control w-50 my-4" placeholder="password length">
             <input type="submit" value="generate" class="btn btn-primary border border-white text-uppercase">
+            <input type="reset" value="reset" class="btn btn-primary border border-white text-uppercase">
         </form>
         <div class="mt-3 text-white">
 
@@ -33,7 +34,7 @@
               $password .= $characters[mt_rand(0, strlen($characters) - 1)];
             }
 
-            echo "<p> <strong> $password </strong> </p> </span>";
+            echo "<p> <span> PASSWORD </span> <strong> $password </strong> </p> </span>";
           }
 
         ?>
