@@ -1,0 +1,11 @@
+h1{
+    font-size: 4rem;
+}
+
+p{
+    font-size: x-large;
+    background-color: rgb(18, 30, 110);
+    width: fit-content;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+}
