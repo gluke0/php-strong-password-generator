@@ -28,11 +28,6 @@ require_once __DIR__ . '/functions.php';
             <input type="reset" value="reset" class="btn btn-primary border border-white text-uppercase">
         </form>
         <div class="mt-3 text-white">
-
-        <?php
-            echo $password;
-        ?>
-
         </div>
     </div>
     
