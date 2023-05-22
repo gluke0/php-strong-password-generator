@@ -21,7 +21,7 @@ require_once __DIR__ . '/functions.php';
 
     <div class="container mt-5">
         <h1 class="text-white text-uppercase text-center mb-4"> generate your <span class="fs-6"> (hopefully) </span> secure password </h1>
-        <form action="functions.php" method="GET">
+        <form action="index.php" method="GET">
             <label class="text-uppercase text-white"> choose the length of your password: </label>
             <input type="text" name="length" class="form-control w-50 my-4" placeholder="password length">
             <input type="submit" value="generate" class="btn btn-primary border border-white text-uppercase">
@@ -29,7 +29,9 @@ require_once __DIR__ . '/functions.php';
         </form>
         <div class="mt-3 text-white">
 
-        
+        <?php
+            echo $password;
+        ?>
 
         </div>
     </div>
