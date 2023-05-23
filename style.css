@@ -2,6 +2,10 @@ h1{
     font-size: 4rem;
 }
 
+.min{
+    font-size: xx-small;
+}
+
 span{
     font-size: x-small;
     padding: 1rem;

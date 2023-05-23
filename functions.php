@@ -1,10 +1,33 @@
 <?php
 
-if (isset($_GET['length']) && $_GET['length'] > 0) {
- $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+{}[]:";?/';
- $password = '';
+if (isset($_GET['length']) && $_GET['length'] >= 3){
+    $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+{}[]:";?/';
 
-if (isset($_GET['repeat']) && $_GET['repeat'] == 'on') {
+    // checkbox password options
+    if (isset($_GET['letters']) || isset($_GET['numbers']) || isset($_GET['symbols'])) {
+        $optionsChar = '';
+
+    // letters
+    if (isset($_GET['letters']) && $_GET['letters'] == 'on'){
+        $optionsChar .= 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    }
+
+    // numbers
+    if (isset($_GET['numbers']) && $_GET['numbers'] == 'on'){
+        $optionsChar .= '0123456789';
+    }
+
+    // symbols
+    if (isset($_GET['symbols']) && $_GET['symbols'] == 'on'){
+        $optionsChar .= '!@#$%^&*()-_=+{}[]:";?/';
+    }
+
+    $characters = $optionsChar;
+    }
+
+    $password = '';
+
+if (isset($_GET['repeat']) && $_GET['repeat'] == 'on'){
     $password = norepeatPassword($characters, $_GET['length']);
 } else {
     $password = generatePassword($characters, $_GET['length']);
