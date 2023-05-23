@@ -17,9 +17,9 @@ if (isset($_GET['repeat']) && $_GET['repeat'] == 'on') {
 // mia originale modificata
 function generatePassword($characters, $length) {
   $strongpassword = '';
-  $alphaLength = strlen($characters) - 1;
+  $maxLength = strlen($characters) - 1;
   for ($i = 0; $i < $length; $i++) {
-    $number = rand(0, $alphaLength);
+    $number = rand(0, $maxLength);
     $strongpassword .= $characters[$number];
   }
   return $strongpassword;
